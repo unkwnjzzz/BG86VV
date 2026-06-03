@@ -312,6 +312,10 @@
             document.getElementById("hpp-total-qty").innerText = `${rekapTotalQty} Pcs`;
             document.getElementById("hpp-failed-qty").innerText = `${rekapFailedQty} Pcs`;
             document.getElementById("hpp-total-settlement").innerText = formatRupiah(rekapTotalSettlement);
+            
+            // --- INI BARIS SAKTI YANG TADI KELUPAAN DI KODINGAN LU ---
+            document.getElementById("hpp-total-laba").innerText = formatRupiah(rekapTotalLabaKotor || (rekapTotalSettlement - rekapTotalHPP));
+            
             document.getElementById("total-biaya-bank").innerText = formatRupiah(totalBiayaBankRiil);
             
             document.getElementById("dana-ready").innerText = formatRupiah(danaReadyGross);
